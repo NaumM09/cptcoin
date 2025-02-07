@@ -20,6 +20,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    line-height: 2rem;
     font-family: "Press Start 2P", cursive;
     text-align: center;
     color: var(--white);
@@ -50,6 +51,14 @@ body, html {
     height: 100%;
     overflow: hidden;
 }
+
+.flag-icon {
+    width: 40px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle; /* Aligns the flag with text */
+}
+
 
 /* 🇿🇦 Green Triangle */
 .green-triangle {

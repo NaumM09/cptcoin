@@ -3,6 +3,7 @@ import "./Cpt.css";
 import { FiCopy } from "react-icons/fi";
 import Palestine from "./palestine-flag.png";
 import DRC from "./drc-flag.png";
+import SouthAfricaFlag from "./south-african-flag.png"; // Import the South African flag
 
 const CPTToken = () => {
     const [walletAddress] = useState("0xYourWalletAddressHere");
@@ -43,12 +44,15 @@ const CPTToken = () => {
                 <div>
                     {/* 🔥 Main Content */}
                     <div className="content">
-                        <h1 className="title">$CPT TOKEN</h1>
-                        <p className="description">
-                            Experience the future of decentralized finance with CPT Token! Inspired by the beauty and resilience of Cape Town, this token is more than just a digital asset—it's a movement.
-                            CPT Token stands in solidarity with the people of Palestine and the Democratic Republic of Congo, bringing awareness to their struggles and advocating for freedom, justice, and economic empowerment.
-                            Decentralization is not just about finance; it’s about sovereignty, liberation, and global unity!
-                        </p>
+                    <h1 className="title">
+    <img src={SouthAfricaFlag} alt="South African Flag" className="flag-icon" />
+    $CPT TOKEN
+</h1>
+<p className="description">
+    Experience the future of decentralized finance with CPT Token! Inspired by the beauty and resilience of Cape Town, this token is more than just a digital asset—it's a movement.
+    CPT Token stands in solidarity with the people of Palestine and the Democratic Republic of Congo, bringing awareness to their struggles and advocating for freedom, justice, and economic empowerment.
+    Decentralization is not just about finance; it’s about sovereignty, liberation, and global unity!
+</p>
 
                         {/* 📌 Wallet Section */}
                         <div className="wallet-container">
