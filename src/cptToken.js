@@ -25,14 +25,23 @@ const CPTToken = () => {
 
     return (
         <div>
+            {/* 🔥 South African Flag Loading Screen */}
             {!isLoaded ? (
                 <div className="load-screen">
+                    <div className="flag-container">
+                        <div className="red-section"></div>
+                        <div className="blue-section"></div>
+                        <div className="green-triangle"></div>
+                        <div className="yellow-stripe"></div>
+                        <div className="black-triangle"></div>
+                    </div>
                     <button className="enter-button" onClick={() => setIsLoaded(true)}>
                         Free Palestine & DRC 🫶
                     </button>
                 </div>
             ) : (
                 <div>
+                    {/* 🔥 Main Content */}
                     <div className="content">
                         <h1 className="title">$CPT TOKEN</h1>
                         <p className="description">
@@ -40,6 +49,8 @@ const CPTToken = () => {
                             CPT Token stands in solidarity with the people of Palestine and the Democratic Republic of Congo, bringing awareness to their struggles and advocating for freedom, justice, and economic empowerment.
                             Decentralization is not just about finance; it’s about sovereignty, liberation, and global unity!
                         </p>
+
+                        {/* 📌 Wallet Section */}
                         <div className="wallet-container">
                             <input type="text" value={walletAddress} readOnly className="wallet-address" />
                             <button onClick={copyToClipboard} className="copy-button">
@@ -47,7 +58,10 @@ const CPTToken = () => {
                             </button>
                         </div>
                         {copySuccess && <p className="copy-notification">✅ Wallet address copied!</p>}
+                        
                         <button className="buy-button">Buy CPT Token</button>
+
+                        {/* 📌 Support Section */}
                         <div className="support-section">
                             <p>We stand with Palestine & DRC</p>
                             <div className="flag-container">
@@ -56,6 +70,8 @@ const CPTToken = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* 🔥 Tokenomics Section */}
                     <section className="tokenomics">
                         <h2>TOKENOMICS</h2>
                         <div className="tokenomics-container">
@@ -73,6 +89,8 @@ const CPTToken = () => {
                             </div>
                         </div>
                     </section>
+
+                    {/* 🔥 Roadmap Section */}
                     <section className="roadmap">
                         <h2>ROADMAP</h2>
                         <p>As part of our mission, a percentage of the CPT Token supply will be allocated to community-voted organizations that support Palestine and the Democratic Republic of Congo.</p>
@@ -95,6 +113,8 @@ const CPTToken = () => {
                             </div>
                         </div>
                     </section>
+
+                    {/* 🎥 Video Gallery Section */}
                     <section className="gallery">
                         <h2>📸 CPT Moments</h2>
                         <div className="gallery-container">
@@ -105,6 +125,8 @@ const CPTToken = () => {
                             ))}
                         </div>
                     </section>
+
+                    {/* 📌 Footer */}
                     <footer className="footer">
                         <p>© 2025 $CPT Token. All rights reserved.</p>
                     </footer>
@@ -115,3 +137,4 @@ const CPTToken = () => {
 };
 
 export default CPTToken;
+

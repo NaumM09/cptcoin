@@ -9,13 +9,16 @@
     --border-glow: #ff0066;
     --dark-bg: #121212;
     --white: #ffffff;
-    --accent-blue: #3399ff;
+    --green: #007847;
+    --yellow: #ffb400;
+    --black: #000000;
+    --red: #de2010;
+    --blue: #002395;
 }
 
 /* 🏆 Global Styles */
 body, html {
     margin: 0;
-    line-height: 2rem;
     padding: 0;
     font-family: "Press Start 2P", cursive;
     text-align: center;
@@ -24,37 +27,97 @@ body, html {
     overflow-x: hidden; /* Prevents horizontal scroll issues */
 }
 
-/* 🔥 South African Flag Loading Screen */
+/* 🔥 South African Flag Styled Loading Screen */
 .load-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    position: relative;
+    z-index: 9999;
     overflow: hidden;
 }
 
 /* 🌍 South African Flag Background */
-.load-screen::before {
-    content: "";
+.flag-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom right,
-        #007847 33.3%,  /* Green */
-        #ffb400 33.3%, #ffb400 50%,  /* Yellow */
-        #000000 50%, #000000 66.6%,  /* Black */
-        #de2010 66.6%, #de2010 75%,  /* Red */
-        #002395 75%, #002395 100%  /* Blue */
-    );
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    z-index: -1;
+    overflow: hidden;
 }
 
-/* ✊ Loading Screen Button */
+/* 🇿🇦 Green Triangle */
+.green-triangle {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--green);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* 🇿🇦 Yellow Stripe */
+.yellow-stripe {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 20%;
+    top: 40%;
+    background: var(--yellow);
+}
+
+/* 🇿🇦 Black Triangle */
+.black-triangle {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(0 30%, 50% 50%, 0 70%);
+    background: var(--black);
+}
+
+/* 🇿🇦 Red Section */
+.red-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 33.33%;
+    background: var(--red);
+}
+
+/* 🇿🇦 Blue Section */
+.blue-section {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 33.33%;
+    background: var(--blue);
+}
+
+/* ✊ Loading Message */
+.loading-message {
+    position: relative;
+    background: rgba(255, 255, 255, 0.95);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 3px solid var(--black);
+    box-shadow: 0px 0px 10px white;
+    animation: glow-pulse 1.5s infinite alternate;
+}
+
+/* ✅ Enter Button */
 .enter-button {
     background: rgba(255, 255, 255, 0.9);
     color: black;
@@ -274,5 +337,30 @@ body, html {
     }
     .gallery-container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ✨ Glowing Effect */
+@keyframes glow-pulse {
+    from {
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    }
+    to {
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* ✅ Mobile Responsive Fix */
+@media (max-width: 768px) {
+    .loading-message {
+        font-size: 1.2rem;
+        padding: 15px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loading-message {
+        font-size: 1rem;
+        padding: 12px 20px;
     }
 }
