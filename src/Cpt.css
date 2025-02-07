@@ -258,34 +258,35 @@ body, html {
 
 /* 📌 Support Section */
 .support-section {
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: bold;
     color: var(--neon-text);
-    text-shadow: 0 0 5px var(--text-glow);
+    text-shadow: 0 0 8px var(--text-glow);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-/* 🇵🇸 🇨🇩 Flags Container */
+/* 🌍 Flags Container */
 .flag-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
     margin-top: 15px;
 }
 
-/* 🌍 Animated Flags */
+/* 🇵🇸 🇨🇩 Flag Styling */
 .flag {
-    width: 80px;
+    width: 120px; /* Larger size for visibility */
     height: auto;
     border-radius: 5px;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     filter: drop-shadow(0px 0px 10px var(--button-glow));
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-
 
 
 /* 🚀 Roadmap */
@@ -407,14 +408,13 @@ body, html {
         padding: 12px 20px;
     }
 }
-
-/* Floating Animation */
+/* Floating Effect */
 @keyframes float {
     0% {
         transform: translateY(0px);
     }
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
     }
     100% {
         transform: translateY(0px);
@@ -429,9 +429,21 @@ body, html {
     animation: float 3s infinite ease-in-out 1.5s;
 }
 
-/* 🏆 Responsive Adjustments */
+/* 🌟 Make Sure the Flags Do Not Overlap Content */
+.flag-container img {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Fixes */
 @media (max-width: 768px) {
     .flag {
-        width: 60px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flag {
+        width: 70px;
     }
 }
