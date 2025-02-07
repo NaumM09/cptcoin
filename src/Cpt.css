@@ -1,0 +1,220 @@
+/* 🌍 Retro Web3 Theme */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --retro-bg: #000033;
+    --neon-text: #ffcc00;
+    --button-glow: #00ffcc;
+    --text-glow: #ff33cc;
+    --border-glow: #ff0066;
+    --dark-bg: #121212;
+    --white: #ffffff;
+    --accent-blue: #3399ff;
+}
+
+/* 🏆 Global Styles */
+body, html {
+    margin: 0;
+    line-height: 2rem;
+    padding: 0;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--retro-bg);
+}
+
+/* 🏆 Retro Navbar */
+.navbar {
+    background: linear-gradient(90deg, var(--border-glow), var(--button-glow));
+    padding: 15px;
+    border-bottom: 4px solid var(--border-glow);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px var(--text-glow);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/* 🔥 Retro Title */
+.title {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: var(--neon-text);
+    text-shadow: 2px 2px 5px var(--text-glow);
+    animation: blink 1s infinite alternate;
+    padding-top: 80px;
+}
+
+/* Retro Blinking Animation */
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.7;
+    }
+}
+
+/* 📌 Wallet Section */
+.wallet-container {
+    max-width: 400px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--border-glow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wallet-address {
+    background: var(--dark-bg);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;
+    border: 2px solid var(--button-glow);
+}
+
+.copy-button {
+    background: var(--button-glow);
+    color: var(--dark-bg);
+    padding: 12px;
+    border: 2px solid var(--text-glow);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.copy-button:hover {
+    background: var(--border-glow);
+}
+
+/* ✅ Copy Notification */
+.copy-notification {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--button-glow);
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 🛒 Buy Button (Glowing & Pulsating) */
+.buy-button {
+    background: var(--button-glow);
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: 2px solid var(--text-glow);
+    box-shadow: 0px 0px 15px var(--text-glow);
+    animation: pulse 1.5s infinite alternate;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.buy-button:hover {
+    background: var(--border-glow);
+}
+
+/* 🚀 Retro Roadmap */
+.roadmap {
+    padding: 60px 20px;
+    background: linear-gradient(90deg, var(--border-glow), var(--button-glow));
+    color: var(--dark-bg);
+    border-radius: 15px;
+    text-shadow: 0px 0px 5px var(--neon-text);
+}
+
+.roadmap h2 {
+    font-size: 2rem;
+    color: var(--dark-bg);
+}
+
+/* 📸 Video Gallery with Checkerboard */
+.video-gallery {
+    padding: 60px 20px;
+    background: url('https://www.transparenttextures.com/patterns/checkered-light.png');
+    border-top: 4px solid var(--text-glow);
+}
+
+.video-gallery h2 {
+    font-size: 2.5rem;
+    color: var(--text-glow);
+    text-shadow: 0px 0px 8px var(--neon-text);
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    border: 3px solid var(--button-glow);
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* 🏆 Footer */
+.footer {
+    padding: 40px;
+    background: var(--retro-bg);
+    color: var(--white);
+    font-size: 1rem;
+    text-align: center;
+    border-top: 4px solid var(--border-glow);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    .roadmap {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+}
