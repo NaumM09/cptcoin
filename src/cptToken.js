@@ -29,17 +29,8 @@ const CPTToken = () => {
             {/* 🔥 South African Flag Loading Screen */}
             {!isLoaded ? (
           <div className="load-screen">
-          <div className="flag-container">
-              <div className="red-section"></div>
-              <div className="white-top"></div> {/* White stripe between Red and Green */}
-              <div className="blue-section"></div>
-              <div className="white-bottom"></div> {/* White stripe between Green and Blue */}
-              <div className="green-triangle"></div>
-              <div className="yellow-stripe"></div>
-              <div className="black-triangle"></div>
-          </div>
                     <button className="enter-button" onClick={() => setIsLoaded(true)}>
-                        Free Palestine & DRC 🫶
+                        We support Palestine & DRC 🫶
                     </button>
                 </div>
             ) : (

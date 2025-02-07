@@ -44,78 +44,29 @@ body, html {
     background: var(--white);
 }
 
-/* 🇿🇦 South African Flag Layout */
+/* 🇿🇦 South African Flag as Background */
 .flag-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background: url('/assets/south-african-flag.jpg') no-repeat center center;
+    background-size: cover;
+    animation: wave-flag 5s infinite linear;
 }
 
-/* 🇿🇦 Red Section */
-.red-section {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 33.3%;
-    background: var(--red);
-}
-
-/* 🇿🇦 Blue Section */
-.blue-section {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 33.3%;
-    background: var(--blue);
-}
-
-/* 🇿🇦 White Stripes */
-.white-stripe-top, .white-stripe-bottom {
-    position: absolute;
-    width: 100%;
-    height: 5%;
-    background: var(--white);
-}
-
-.white-stripe-top {
-    top: 33%;
-}
-
-.white-stripe-bottom {
-    bottom: 33%;
-}
-
-/* 🇿🇦 Green Triangle */
-.green-triangle {
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: var(--green);
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-
-/* 🇿🇦 Yellow Border */
-.yellow-stripe {
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 10%;
-    top: 45%;
-    background: var(--yellow);
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-
-/* 🇿🇦 Black Triangle */
-.black-triangle {
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    clip-path: polygon(0 30%, 50% 50%, 0 70%);
-    background: var(--black);
+/* 🎭 Waving Animation */
+@keyframes wave-flag {
+    0% {
+        transform: scale(1.02) skewX(2deg);
+    }
+    50% {
+        transform: scale(1.03) skewX(-2deg);
+    }
+    100% {
+        transform: scale(1.02) skewX(2deg);
+    }
 }
 
 /* ✅ Enter Button */
@@ -274,7 +225,7 @@ body, html {
 
 /* 🇵🇸 🇨🇩 Flags Styling */
 .flag {
-    width: 300px; /* Adjust for proper sizing */
+    width: 100px; /* Adjust for proper sizing */
     height: auto;
     border-radius: 5px;
     position: relative;
@@ -438,6 +389,6 @@ body, html {
 
 @media (max-width: 480px) {
     .flag {
-        width: 150px;
+        width: 60px;
     }
 }
