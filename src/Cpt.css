@@ -29,6 +29,7 @@ body, html {
 }
 
 /* 🌍 South African Flag Styled Loading Screen */
+/* 🌍 South African Flag Styled Loading Screen */
 .load-screen {
     position: fixed;
     top: 0;
@@ -43,22 +44,47 @@ body, html {
     background: var(--white);
 }
 
-/* 🇿🇦 South African Flag Background */
+/* 🇿🇦 South African Flag Layout */
 .flag-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        var(--red) 0%,
-        var(--red) 33%,
-        var(--white) 33%,
-        var(--white) 66%,
-        var(--blue) 66%,
-        var(--blue) 100%
-    );
+}
+
+/* 🇿🇦 Red Section */
+.red-section {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 33.3%;
+    background: var(--red);
+}
+
+/* 🇿🇦 Blue Section */
+.blue-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 33.3%;
+    background: var(--blue);
+}
+
+/* 🇿🇦 White Stripes */
+.white-stripe-top, .white-stripe-bottom {
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    background: var(--white);
+}
+
+.white-stripe-top {
+    top: 33%;
+}
+
+.white-stripe-bottom {
+    bottom: 33%;
 }
 
 /* 🇿🇦 Green Triangle */
@@ -92,7 +118,7 @@ body, html {
     background: var(--black);
 }
 
-/* ✊ Enter Button */
+/* ✅ Enter Button */
 .enter-button {
     position: absolute;
     z-index: 3;
@@ -114,6 +140,7 @@ body, html {
     color: white;
     transform: scale(1.05);
 }
+
 /* 🔥 Title */
 .title {
     font-size: 2.8rem;
