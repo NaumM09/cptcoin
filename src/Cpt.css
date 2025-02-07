@@ -25,10 +25,10 @@ body, html {
     text-align: center;
     color: var(--white);
     background-color: var(--retro-bg);
-    overflow-x: hidden; /* Prevents horizontal scroll issues */
+    overflow-x: hidden;
 }
 
-/* 🔥 South African Flag Styled Loading Screen */
+/* 🔥 South African Flag Loading Screen */
 .load-screen {
     position: fixed;
     top: 0;
@@ -42,88 +42,77 @@ body, html {
     overflow: hidden;
 }
 
-/* 🌍 South African Flag Background */
+/* 🌍 South African Flag Design */
 .flag-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
-.flag-icon {
-    width: 40px; /* Adjust the size as needed */
-    height: auto;
-    margin-right: 10px;
-    vertical-align: middle; /* Aligns the flag with text */
+/* 🇿🇦 Red Top Section */
+.red-section {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 33%;
+    background: var(--red);
 }
 
+/* 🇿🇦 Blue Bottom Section */
+.blue-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 33%;
+    background: var(--blue);
+}
+
+/* 🇿🇦 White Separator Stripes */
+.white-top {
+    position: absolute;
+    top: 33%;
+    width: 100%;
+    height: 4%;
+    background: var(--white);
+}
+.white-bottom {
+    position: absolute;
+    bottom: 33%;
+    width: 100%;
+    height: 4%;
+    background: var(--white);
+}
 
 /* 🇿🇦 Green Triangle */
 .green-triangle {
     position: absolute;
     left: 0;
-    width: 50%;
+    width: 40%;
     height: 100%;
     background: var(--green);
     clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-
-/* 🇿🇦 Yellow Stripe */
-.yellow-stripe {
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 20%;
-    top: 40%;
-    background: var(--yellow);
 }
 
 /* 🇿🇦 Black Triangle */
 .black-triangle {
     position: absolute;
     left: 0;
-    width: 50%;
+    width: 25%;
     height: 100%;
-    clip-path: polygon(0 30%, 50% 50%, 0 70%);
     background: var(--black);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
-/* 🇿🇦 Red Section */
-.red-section {
+/* 🇿🇦 Yellow Border */
+.yellow-stripe {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 33.33%;
-    background: var(--red);
-}
-
-/* 🇿🇦 Blue Section */
-.blue-section {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 33.33%;
-    background: var(--blue);
-}
-
-/* ✊ Loading Message */
-.loading-message {
-    position: relative;
-    background: rgba(255, 255, 255, 0.95);
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 20px 30px;
-    border-radius: 12px;
-    text-align: center;
-    text-transform: uppercase;
-    border: 3px solid var(--black);
-    box-shadow: 0px 0px 10px white;
-    animation: glow-pulse 1.5s infinite alternate;
+    left: 0;
+    width: 8%;
+    height: 100%;
+    background: var(--yellow);
+    clip-path: polygon(0 30%, 100% 50%, 0 70%);
 }
 
 /* ✅ Enter Button */
@@ -148,6 +137,7 @@ body, html {
     color: white;
     transform: scale(1.05);
 }
+
 
 
 /* 🔥 Title */
@@ -283,7 +273,7 @@ body, html {
 
 /* 🇵🇸 🇨🇩 Flags Styling */
 .flag {
-    width: 100px; /* Adjust for proper sizing */
+    width: 300px; /* Adjust for proper sizing */
     height: auto;
     border-radius: 5px;
     position: relative;
@@ -447,6 +437,6 @@ body, html {
 
 @media (max-width: 480px) {
     .flag {
-        width: 60px;
+        width: 150px;
     }
 }
