@@ -88,6 +88,30 @@ const CPTToken = () => {
                         </div>
                     </section>
 
+                    {/* 🔥 News Section */}
+<section className="news">
+    <h2>📰 Free Palestine & DRC</h2>
+    <div className="news-container">
+        <div className="news-item">
+            <img src="/assets/news1.jpg" alt="News 1" className="news-image"/>
+        </div>
+        <div className="news-item">
+            <img src="/assets/news2.jpg" alt="News 2" className="news-image"/>
+        </div>
+        <div className="news-item">
+            <img src="/assets/news3.jpg" alt="News 3" className="news-image"/>
+        </div>
+        <div className="news-item">
+            <img src="/assets/news4.jpg" alt="News 4" className="news-image"/>
+        </div>
+        <div className="news-item">
+            <img src="/assets/news5.jpg" alt="News 5" className="news-image"/>
+        </div>
+        <div className="news-item">
+            <img src="/assets/news6.jpg" alt="News 6" className="news-image"/>
+        </div>
+    </div>
+</section>
                     {/* 🔥 Roadmap Section */}
                     <section className="roadmap">
                         <h2>ROADMAP</h2>
@@ -111,10 +135,11 @@ const CPTToken = () => {
                             </div>
                         </div>
                     </section>
+            
 
                     {/* 🎥 Video Gallery Section */}
                     <section className="gallery">
-                        <h2>📸 CPT Moments</h2>
+                        <h2>📸 This is Africa</h2>
                         <div className="gallery-container">
                             {images.map((image, index) => (
                                 <div className="gallery-item" key={index}>
