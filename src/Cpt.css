@@ -50,40 +50,15 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-/* 🇿🇦 Red Section */
-.red-section {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 33%;
-    background: var(--red);
-}
-
-/* 🇿🇦 Blue Section */
-.blue-section {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 33%;
-    background: var(--blue);
-}
-
-/* 🇿🇦 White Stripes */
-.white-stripe-top, .white-stripe-bottom {
-    position: absolute;
-    width: 100%;
-    height: 5%;
-    background: var(--white);
-}
-
-.white-stripe-top {
-    top: 32.5%;
-}
-
-.white-stripe-bottom {
-    bottom: 32.5%;
+    background: linear-gradient(
+        to bottom,
+        var(--red) 0%,
+        var(--red) 33%,
+        var(--white) 33%,
+        var(--white) 66%,
+        var(--blue) 66%,
+        var(--blue) 100%
+    );
 }
 
 /* 🇿🇦 Green Triangle */
@@ -139,7 +114,6 @@ body, html {
     color: white;
     transform: scale(1.05);
 }
-
 /* 🔥 Title */
 .title {
     font-size: 2.8rem;
