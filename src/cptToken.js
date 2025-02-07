@@ -7,28 +7,20 @@ import DRC from "./drc-flag.png";
 const CPTToken = () => {
     const [walletAddress] = useState("0xYourWalletAddressHere");
     const [copySuccess, setCopySuccess] = useState(false);
-    const [playingVideos, setPlayingVideos] = useState({});
     const [isLoaded, setIsLoaded] = useState(false);
 
-    const videos = [
-        "/assets/video1.mp4",
-        "/assets/video2.mp4",
-        "/assets/video3.mp4",
-        "/assets/video5.mp4",
-        "/assets/video6.mp4",
+    const images = [
+        "/assets/img.jpg",
+        "/assets/img1.jpg",
+        "/assets/img2.jpg",
+        "/assets/img3.jpg",
+        "/assets/img4.jpg",
     ];
 
     const copyToClipboard = () => {
         navigator.clipboard.writeText(walletAddress);
         setCopySuccess(true);
         setTimeout(() => setCopySuccess(false), 3000);
-    };
-
-    const handleVideoClick = (index) => {
-        setPlayingVideos((prev) => ({
-            ...prev,
-            [index]: !prev[index],
-        }));
     };
 
     return (
@@ -103,20 +95,18 @@ const CPTToken = () => {
                             </div>
                         </div>
                     </section>
-                    <section className="video-gallery">
+                    <section className="gallery">
                         <h2>📸 CPT Moments</h2>
                         <div className="gallery-container">
-                            {videos.map((video, index) => (
-                                <div className="gallery-item" key={index} onClick={() => handleVideoClick(index)}>
-                                    <video className="video" controls={playingVideos[index]}>
-                                        <source src={video} type="video/mp4" />
-                                    </video>
+                            {images.map((image, index) => (
+                                <div className="gallery-item" key={index}>
+                                    <img className="gallery-image" src={image} alt={`Gallery ${index + 1}`} />
                                 </div>
                             ))}
                         </div>
                     </section>
                     <footer className="footer">
-                        <p>© 2025 CPT Token. All rights reserved.</p>
+                        <p>© 2025 $CPT Token. All rights reserved.</p>
                     </footer>
                 </div>
             )}

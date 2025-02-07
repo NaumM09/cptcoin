@@ -15,6 +15,7 @@
 /* 🏆 Global Styles */
 body, html {
     margin: 0;
+    line-height: 2rem;
     padding: 0;
     font-family: "Press Start 2P", cursive;
     text-align: center;
@@ -23,41 +24,57 @@ body, html {
     overflow-x: hidden; /* Prevents horizontal scroll issues */
 }
 
-/* 🔥 Loading Screen */
+/* 🔥 South African Flag Loading Screen */
 .load-screen {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: var(--retro-bg);
-    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
+/* 🌍 South African Flag Background */
+.load-screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom right,
+        #007847 33.3%,  /* Green */
+        #ffb400 33.3%, #ffb400 50%,  /* Yellow */
+        #000000 50%, #000000 66.6%,  /* Black */
+        #de2010 66.6%, #de2010 75%,  /* Red */
+        #002395 75%, #002395 100%  /* Blue */
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
+}
+
+/* ✊ Loading Screen Button */
 .enter-button {
-    background: var(--button-glow);
-    color: var(--dark-bg);
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
     padding: 20px 50px;
-    border: 3px solid var(--text-glow);
+    border: 3px solid black;
     border-radius: 10px;
     font-size: 1.5rem;
     text-transform: uppercase;
-    box-shadow: 0px 0px 15px var(--text-glow);
-    animation: pulse 1.5s infinite alternate;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0px 0px 10px white;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
 }
 
 .enter-button:hover {
-    background: var(--border-glow);
+    background: black;
+    color: white;
+    transform: scale(1.05);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
 
 /* 🔥 Title */
 .title {
@@ -178,15 +195,22 @@ body, html {
     text-shadow: 0px 0px 8px var(--text-glow);
 }
 
-/* 📸 Video Gallery */
-.video-gallery {
+/* 📸 Image Gallery */
+.gallery {
     padding: 50px 20px;
     background: linear-gradient(90deg, var(--border-glow), var(--button-glow));
 }
 
+.gallery h2 {
+    font-size: 2.5rem;
+    color: var(--dark-bg);
+    text-shadow: 0px 0px 8px var(--text-glow);
+}
+
+/* ✅ Image Grid */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     max-width: 1000px;
     margin: 0 auto;
@@ -206,10 +230,16 @@ body, html {
     justify-content: center;
 }
 
-.video {
+.gallery-image {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
 }
 
 /* 🏆 Footer */
