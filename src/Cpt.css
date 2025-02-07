@@ -24,21 +24,43 @@ body, html {
     overflow-x: hidden; /* Prevents horizontal scroll issues */
 }
 
-/* 🏆 Retro Navbar */
-.navbar {
-    background: linear-gradient(90deg, var(--border-glow), var(--button-glow));
-    padding: 15px;
-    border-bottom: 4px solid var(--border-glow);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-shadow: 0 0 5px var(--text-glow);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
+/* 🚀 Loading Screen */
+.load-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--retro-bg);
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* 🔥 Retro Title */
+.enter-button {
+    background: var(--button-glow);
+    color: var(--dark-bg);
+    padding: 20px 50px;
+    border: 3px solid var(--text-glow);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 15px var(--text-glow);
+    animation: pulse 1.5s infinite alternate;
+    cursor: pointer;
+}
+
+.enter-button:hover {
+    background: var(--border-glow);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 🏆 Retro Title */
 .title {
     font-size: 2.8rem;
     text-transform: uppercase;
@@ -48,7 +70,6 @@ body, html {
     padding-top: 80px;
 }
 
-/* Retro Blinking Animation */
 @keyframes blink {
     from {
         opacity: 1;
@@ -110,92 +131,6 @@ body, html {
     transition: opacity 0.3s ease-in-out;
 }
 
-/* 🛒 Buy Button (Glowing & Pulsating) */
-.buy-button {
-    background: var(--button-glow);
-    padding: 15px 40px;
-    border-radius: 8px;
-    font-size: 1rem;
-    border: 2px solid var(--text-glow);
-    box-shadow: 0px 0px 15px var(--text-glow);
-    animation: pulse 1.5s infinite alternate;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-@keyframes pulse {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.05);
-    }
-}
-
-.buy-button:hover {
-    background: var(--border-glow);
-}
-
-/* 🚀 Retro Roadmap */
-.roadmap {
-    padding: 60px 20px;
-    background: linear-gradient(90deg, var(--border-glow), var(--button-glow));
-    color: var(--dark-bg);
-    border-radius: 15px;
-    text-shadow: 0px 0px 5px var(--neon-text);
-}
-
-.roadmap h2 {
-    font-size: 2rem;
-    color: var(--dark-bg);
-}
-
-/* 📸 Video Gallery (Fixed Grey Box & Overflow) */
-.video-gallery {
-    padding: 60px 20px;
-    background: url('https://www.transparenttextures.com/patterns/checkered-light.png');
-    border-top: 4px solid var(--text-glow);
-}
-
-.video-gallery h2 {
-    font-size: 2.5rem;
-    color: var(--text-glow);
-    text-shadow: 0px 0px 8px var(--neon-text);
-}
-
-/* ✅ FIXED VIDEO GRID */
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-/* 🔥 Video Cards */
-.gallery-item {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    border: 3px solid var(--button-glow);
-    background: none; /* Fixes grey square issue */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Fix spacing */
-    overflow: hidden; /* Ensures no grey space */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ✅ FIXED VIDEO DISPLAY */
-.gallery-item video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
 /* 🏆 Footer */
 .footer {
     padding: 40px;
@@ -211,25 +146,16 @@ body, html {
     .title {
         font-size: 2.5rem;
     }
-    .roadmap {
-        padding: 40px 15px;
-    }
 }
 
 @media (max-width: 768px) {
     .title {
         font-size: 2rem;
     }
-    .gallery-container {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (max-width: 480px) {
     .title {
         font-size: 1.8rem;
-    }
-    .gallery-container {
-        grid-template-columns: 1fr;
     }
 }
