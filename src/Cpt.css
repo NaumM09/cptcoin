@@ -21,6 +21,7 @@ body, html {
     text-align: center;
     color: var(--white);
     background-color: var(--retro-bg);
+    overflow-x: hidden; /* Prevents horizontal scroll issues */
 }
 
 /* 🏆 Retro Navbar */
@@ -149,7 +150,7 @@ body, html {
     color: var(--dark-bg);
 }
 
-/* 📸 Video Gallery with Checkerboard */
+/* 📸 Video Gallery (Fixed Grey Box & Overflow) */
 .video-gallery {
     padding: 60px 20px;
     background: url('https://www.transparenttextures.com/patterns/checkered-light.png');
@@ -162,23 +163,37 @@ body, html {
     text-shadow: 0px 0px 8px var(--neon-text);
 }
 
+/* ✅ FIXED VIDEO GRID */
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 10px;
 }
 
+/* 🔥 Video Cards */
 .gallery-item {
     width: 100%;
+    height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
     border: 3px solid var(--button-glow);
+    background: none; /* Fixes grey square issue */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Fix spacing */
+    overflow: hidden; /* Ensures no grey space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.gallery-item:hover {
-    transform: scale(1.05);
+/* ✅ FIXED VIDEO DISPLAY */
+.gallery-item video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* 🏆 Footer */

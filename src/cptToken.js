@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import "./Cpt.css";
 import { FiCopy } from "react-icons/fi";
 import Palestine from "./palestine-flag.png";
@@ -7,8 +7,7 @@ import DRC from "./drc-flag.png";
 const CPTToken = () => {
     const [walletAddress] = useState("0xYourWalletAddressHere");
     const [copySuccess, setCopySuccess] = useState(false);
-    const [loadedVideos, setLoadedVideos] = useState([]);
-    const observerRef = useRef(null);
+    const [playingVideos, setPlayingVideos] = useState({}); // Track which videos are playing
 
     // Video sources (Grid Display)
     const videos = [
@@ -22,31 +21,15 @@ const CPTToken = () => {
     const copyToClipboard = () => {
         navigator.clipboard.writeText(walletAddress);
         setCopySuccess(true);
-
-        // Hide notification after 3 seconds
-        setTimeout(() => {
-            setCopySuccess(false);
-        }, 3000);
+        setTimeout(() => setCopySuccess(false), 3000);
     };
 
-    useEffect(() => {
-        observerRef.current = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setLoadedVideos((prevLoaded) => [...prevLoaded, entry.target.dataset.index]);
-                        observerRef.current.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-
-        const videoElements = document.querySelectorAll(".lazy-video");
-        videoElements.forEach((video) => observerRef.current.observe(video));
-
-        return () => observerRef.current.disconnect();
-    }, []);
+    const handleVideoClick = (index) => {
+        setPlayingVideos((prev) => ({
+            ...prev,
+            [index]: !prev[index], // Toggle play state
+        }));
+    };
 
     return (
         <div>
@@ -54,8 +37,8 @@ const CPTToken = () => {
             <div className="content">
                 <h1 className="title">$CPT TOKEN</h1>
                 <p className="description">
-                    Experience the future of decentralized finance with CPT Token! Inspired by the beauty and resilience of Cape Town, this token is more than just a digital asset—it's a movement.
-                    CPT Token stands in solidarity with the people of Palestine and the Democratic Republic of Congo, bringing awareness to their struggles and advocating for freedom, justice, and economic empowerment.
+                    Experience the future of decentralized finance with CPT Token! Inspired by the beauty and resilience of Cape Town, this token is more than just a digital asset—it's a movement. 
+                    CPT Token stands in solidarity with the people of Palestine and the Democratic Republic of Congo, bringing awareness to their struggles and advocating for freedom, justice, and economic empowerment. 
                     Decentralization is not just about finance; it’s about sovereignty, liberation, and global unity!
                 </p>
 
@@ -125,26 +108,15 @@ const CPTToken = () => {
                 </div>
             </section>
 
-            {/* 🎥 Video Gallery Section with Lazy Loading */}
+            {/* 🎥 Video Gallery Section */}
             <section className="video-gallery">
                 <h2>📸 CPT Moments</h2>
                 <div className="gallery-container">
                     {videos.map((video, index) => (
-                        <div
-                            key={index}
-                            className="lazy-video"
-                            data-index={index}
-                            style={{ width: "100%", height: "250px", backgroundColor: "#222" }}
-                        >
-                            {loadedVideos.includes(index.toString()) ? (
-                                <video className="gallery-item" autoPlay loop muted>
-                                    <source src={video} type="video/mp4" />
-                                </video>
-                            ) : (
-                                <p style={{ color: "#ffcc00", textAlign: "center", paddingTop: "100px" }}>
-                                    Loading video...
-                                </p>
-                            )}
+                        <div className="gallery-item" key={index} onClick={() => handleVideoClick(index)}>
+                            <video className="video" controls={playingVideos[index]}>
+                                <source src={video} type="video/mp4" />
+                            </video>
                         </div>
                     ))}
                 </div>
