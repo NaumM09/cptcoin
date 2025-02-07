@@ -29,6 +29,7 @@ body, html {
 }
 
 /* 🔥 South African Flag Loading Screen */
+/* 🌍 South African Flag Styled Loading Screen */
 .load-screen {
     position: fixed;
     top: 0;
@@ -40,9 +41,10 @@ body, html {
     align-items: center;
     z-index: 9999;
     overflow: hidden;
+    background: var(--white);
 }
 
-/* 🌍 South African Flag Design */
+/* 🇿🇦 South African Flag Background */
 .flag-container {
     position: absolute;
     top: 0;
@@ -51,7 +53,7 @@ body, html {
     height: 100%;
 }
 
-/* 🇿🇦 Red Top Section */
+/* 🇿🇦 Red Section */
 .red-section {
     position: absolute;
     top: 0;
@@ -60,7 +62,7 @@ body, html {
     background: var(--red);
 }
 
-/* 🇿🇦 Blue Bottom Section */
+/* 🇿🇦 Blue Section */
 .blue-section {
     position: absolute;
     bottom: 0;
@@ -69,39 +71,29 @@ body, html {
     background: var(--blue);
 }
 
-/* 🇿🇦 White Separator Stripes */
-.white-top {
+/* 🇿🇦 White Stripes */
+.white-stripe-top, .white-stripe-bottom {
     position: absolute;
-    top: 33%;
     width: 100%;
-    height: 4%;
+    height: 5%;
     background: var(--white);
 }
-.white-bottom {
-    position: absolute;
+
+.white-stripe-top {
+    top: 33%;
+}
+
+.white-stripe-bottom {
     bottom: 33%;
-    width: 100%;
-    height: 4%;
-    background: var(--white);
 }
 
 /* 🇿🇦 Green Triangle */
 .green-triangle {
     position: absolute;
     left: 0;
-    width: 40%;
+    width: 50%;
     height: 100%;
     background: var(--green);
-    clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-
-/* 🇿🇦 Black Triangle */
-.black-triangle {
-    position: absolute;
-    left: 0;
-    width: 25%;
-    height: 100%;
-    background: var(--black);
     clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
@@ -109,13 +101,24 @@ body, html {
 .yellow-stripe {
     position: absolute;
     left: 0;
-    width: 8%;
-    height: 100%;
+    width: 50%;
+    height: 15%;
+    top: 42.5%;
     background: var(--yellow);
-    clip-path: polygon(0 30%, 100% 50%, 0 70%);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
-/* ✅ Enter Button */
+/* 🇿🇦 Black Triangle */
+.black-triangle {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(0 30%, 50% 50%, 0 70%);
+    background: var(--black);
+}
+
+/* ✊ Enter Button */
 .enter-button {
     position: absolute;
     z-index: 3;
@@ -137,7 +140,6 @@ body, html {
     color: white;
     transform: scale(1.05);
 }
-
 
 
 /* 🔥 Title */
