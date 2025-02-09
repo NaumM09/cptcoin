@@ -4,9 +4,11 @@ import { FiCopy } from "react-icons/fi";
 import Palestine from "./palestine-flag.png";
 import DRC from "./drc-flag.png";
 import SouthAfricaFlag from "./south-african-flag.png"; // SA Flag Image
+import CPTClaim from "./CptClaim";
+import CptLeaderboard from "./CptLeaderboard";
 
 const CPTToken = () => {
-    const [walletAddress] = useState("0xYourWalletAddressHere");
+    const [walletAddress] = useState("62Y2KsRU2vuqusFMPkQSuhodyZzXXLeLgSpiEkmq6MVV");
     const [copySuccess, setCopySuccess] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
 
@@ -59,6 +61,8 @@ const CPTToken = () => {
 
                         <button className="buy-button">Buy CPT Token</button>
 
+                        <CPTClaim/>
+
                         {/* 📌 Support Section */}
                         <div className="support-section">
                             <p>We stand with Palestine & DRC</p>
@@ -68,6 +72,8 @@ const CPTToken = () => {
                             </div>
                         </div>
                     </div>
+
+                    <CptLeaderboard/>
 
                     {/* 🔥 Tokenomics Section */}
                     <section className="tokenomics">

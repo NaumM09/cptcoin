@@ -338,6 +338,71 @@ body, html {
     text-shadow: 0px 0px 8px var(--text-glow);
 }
 
+/* 🚀 Claim Section */
+.claim-section {
+    text-align: center;
+    background: var(--retro-bg);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.claim-section h2 {
+    color: var(--neon-text);
+    text-shadow: 0px 0px 8px var(--text-glow);
+}
+
+.copy-button {
+    background: var(--button-glow);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.claim-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background: var(--border-glow);
+    color: var(--white);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.claim-button.disabled {
+    background: grey;
+    cursor: not-allowed;
+}
+
+.remaining-tokens {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--text-glow);
+}
+
+/* 🏆 Leaderboard */
+.leaderboard-section {
+    text-align: center;
+    background: var(--retro-bg);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.leaderboard-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+    border: 1px solid var(--white);
+    padding: 8px;
+    text-align: center;
+}
+
+.leaderboard-table th {
+    background: var(--border-glow);
+}
+
 /* ✅ Image Grid */
 .gallery-container {
     display: grid;
@@ -411,6 +476,75 @@ body, html {
     }
 }
 
+/* 🚀 Responsive Claim Section */
+@media (max-width: 768px) {
+    .claim-section {
+        padding: 15px;
+    }
+
+    .claim-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .copy-button,
+    .claim-button {
+        font-size: 0.9rem;
+        padding: 10px;
+        max-width: 250px;
+    }
+
+    .remaining-tokens {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .claim-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .copy-button,
+    .claim-button {
+        font-size: 0.85rem;
+        padding: 8px;
+        max-width: 220px;
+    }
+}
+
+/* 🏆 Responsive Leaderboard */
+@media (max-width: 768px) {
+    .leaderboard-section {
+        padding: 15px;
+    }
+
+    .leaderboard-table {
+        width: 100%;
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .leaderboard-table th, 
+    .leaderboard-table td {
+        padding: 6px;
+    }
+
+    .leaderboard-table th {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .leaderboard-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .leaderboard-table th,
+    .leaderboard-table td {
+        font-size: 0.85rem;
+        padding: 5px;
+    }
+}
+
 /* ✨ Glowing Effect */
 @keyframes glow-pulse {
     from {
@@ -435,6 +569,7 @@ body, html {
         padding: 12px 20px;
     }
 }
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .flag {
