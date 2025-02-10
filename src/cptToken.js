@@ -61,8 +61,6 @@ const CPTToken = () => {
 
                         <button className="buy-button">Buy CPT Token</button>
 
-                        <CPTClaim/>
-
                         {/* 📌 Support Section */}
                         <div className="support-section">
                             <p>We stand with Palestine & DRC</p>
