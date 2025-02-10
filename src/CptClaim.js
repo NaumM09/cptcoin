@@ -11,7 +11,7 @@ const CPTClaim = () => {
 
     useEffect(() => {
         const fetchWallet = async () => {
-            setWalletAddress("62Y2KsRU2vuqusFMPkQSuhodyZzXXLeLgSpiEkmq6MVV");
+            setWalletAddress("8r9drpRjYBE43LrH1qTYDdpHE6PzSa6KLPpfXAXgRfmB");
         };
         fetchWallet();
     }, []);
