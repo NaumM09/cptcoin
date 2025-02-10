@@ -8,7 +8,7 @@ import CPTClaim from "./CptClaim";
 import CptLeaderboard from "./CptLeaderboard";
 
 const CPTToken = () => {
-    const [walletAddress] = useState("8r9drpRjYBE43LrH1qTYDdpHE6PzSa6KLPpfXAXgRfmB");
+    const [walletAddress] = useState("73ZCTcBrNDK26xU14qnxRqoTBVDUSdSe1MTfU6gmzFLX");
     const [copySuccess, setCopySuccess] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
 
