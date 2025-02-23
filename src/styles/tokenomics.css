@@ -1,0 +1,66 @@
+/* Tokenomics.css */
+
+/* General styling for the section */
+.tokenomics-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E1A39;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  /* Title styling */
+  .tokenomics-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fdbb2d; /* Gold accent color */
+  }
+  
+  /* Container for tokenomics items */
+  .tokenomics-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  /* Individual tokenomics items */
+  .tokenomics-item {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    padding: 15px 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, background 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  /* Hover effect for interactivity */
+  .tokenomics-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+  
+  /* Styling for tokenomics item headings */
+  .tokenomics-item h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  /* Styling for tokenomics item values */
+  .tokenomics-item span {
+    font-weight: 700;
+    color: #fdbb2d; /* Gold color */
+    font-size: 18px;
+  }
+  

@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Root Variables */
+:root {
+  --primary-bg: #1E1A39;   /* Dark background */
+  --secondary-bg: #2A2645; /* Slightly lighter background */
+  --primary-text: #ffffff; /* White text */
+  --secondary-text: rgba(255, 255, 255, 0.85); /* Slightly muted text */
+  --accent-color: #fdbb2d; /* Gold accent */
+  --button-bg: #007bff; /* Blue for buttons */
+  --button-hover: #0056b3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Body Styling */
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  font-size: 16px;
+  line-height: 1.6;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* General Container for Sections */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+/* Text Styling */
+p {
+  color: var(--secondary-text);
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button, .button {
+  display: inline-block;
+  background: var(--button-bg);
+  color: var(--primary-text);
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover, .button:hover {
+  background: var(--button-hover);
+}
+
+/* Forms & Inputs */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--secondary-bg);
+  color: var(--primary-text);
+  font-size: 16px;
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffd700; /* Brighter gold */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
   }
 }

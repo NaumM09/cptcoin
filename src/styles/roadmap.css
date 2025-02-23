@@ -1,0 +1,108 @@
+/* Roadmap.css */
+
+/* Container styling */
+.roadmap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1E1A39;
+    color: white;
+    padding: 50px 20px;
+  }
+  
+  /* Title styling */
+  .roadmap-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fdbb2d; /* Gold accent color */
+  }
+  
+  /* Subtext styling */
+  .roadmap-subtext {
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  /* Roadmap timeline layout */
+  .roadmap-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  /* Roadmap phase card */
+  .roadmap-phase {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid transparent;
+  }
+  
+  /* Hover effect */
+  .roadmap-phase:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Phase title styling */
+  .roadmap-phase h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  /* Phase subtitle styling */
+  .roadmap-phase h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fdbb2d;
+  }
+  
+  /* List styling */
+  .roadmap-phase ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .roadmap-phase li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.9;
+  }
+  
+  /* Phase status colors */
+  .completed {
+    border-left-color: #2ecc71; /* Green for completed */
+  }
+  
+  .upcoming {
+    border-left-color: #fdbb2d; /* Gold for upcoming */
+  }
+  
+  .planned {
+    border-left-color: #e74c3c; /* Red for planned */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .roadmap-timeline {
+      grid-template-columns: 1fr; /* Stack phases on smaller screens */
+    }
+  }
+  

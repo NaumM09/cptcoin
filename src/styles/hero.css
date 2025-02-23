@@ -1,0 +1,175 @@
+/* Hero Section Styling */
+.hero-container {
+    background-color: #1E1A39; /* Dark background */
+    color: #ffffff;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 80vh;
+  }
+  
+  /* Content Wrapper */
+  .hero-content {
+    max-width: 750px;
+    width: 100%;
+  }
+  
+  /* Main Title */
+  .hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+  }
+  
+  /* Description Text */
+  .hero-text {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Highlighted Text */
+  .highlight {
+    font-weight: 700;
+    color: #fdbb2d; /* Gold accent */
+  }
+  
+  /* Subtext */
+  .hero-subtext {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.85;
+    margin-bottom: 25px;
+  }
+  
+  /* Button Container */
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* Whitepaper Button */
+  .whitepaper-button,
+  .join-button {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  /* Whitepaper Button */
+  .whitepaper-button {
+    background-color: #ffffff;
+    color: #1E1A39;
+    border: 2px solid #ffffff;
+  }
+  
+  .whitepaper-button:hover {
+    background-color: transparent;
+    color: #ffffff;
+  }
+  
+  /* Join Button (Disabled for Now) */
+  .join-button {
+    background-color: #aaaaaa;
+    color: #ffffff;
+    border: 2px solid #aaaaaa;
+    cursor: not-allowed;
+  }
+  
+  /* Wallet Container */
+  .wallet-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 18px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto 20px;
+  }
+  
+  /* Wallet Address */
+  .wallet-address {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+  }
+  
+  /* Copy Button */
+  .copy-button {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .copy-button:hover {
+    color: #fdbb2d;
+  }
+  
+  /* Copy Notification */
+  .copy-notification {
+    color: #fdbb2d;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Buy Button */
+  .buy-button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border: none;
+  }
+  
+  .buy-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-container {
+      padding: 60px 20px;
+    }
+  
+    .hero-title {
+      font-size: 36px;
+    }
+  
+    .hero-text {
+      font-size: 16px;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .wallet-container {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  
