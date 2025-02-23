@@ -17,7 +17,6 @@ const Roadmap = () => {
           <ul>
             <li>✅ Token Deployment & Smart Contract Audit</li>
             <li>✅ Website & Whitepaper Release</li>
-            <li>🟡 Community Growth & Awareness Campaigns</li>
             <li>🔜 DEX Listing & Liquidity Pool Setup</li>
           </ul>
         </div>
