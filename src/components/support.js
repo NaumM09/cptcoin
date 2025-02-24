@@ -46,11 +46,11 @@ export default function Support() {
           </div>
           <div className="news-item">
             <img src="/assets/news5.jpg" alt="News 5" className="news-image"/>
-            <p className="news-title">South Africa’s genocide case against Israel at the ICJ</p>
+            <p className="news-title">South Africa stands with Palestine</p>
           </div>
           <div className="news-item">
             <img src="/assets/news6.jpg" alt="News 6" className="news-image"/>
-            <p className="news-title">South Africa’s involvement in DR Congo</p>
+            <p className="news-title">South Africa’s genocide case against Israel at the ICJ</p>
           </div>
         </div>
       </section>
