@@ -101,7 +101,7 @@ export default function Roadmap() {
         <div className="allocation-items">
           <div className="allocation-item">
             <div className="allocation-percent">50%</div>
-            <div className="allocation-label">Awareness Campaigns</div>
+            <div className="allocation-label">Burned Supply</div>
           </div>
           <div className="allocation-item">
             <div className="allocation-percent">30%</div>

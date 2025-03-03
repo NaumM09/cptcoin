@@ -198,7 +198,7 @@ const Whitepaper = () => {
           </p>
           <ul>
             <li><strong>Total Supply:</strong> 1 Billion SAT</li>
-            <li><strong>50% (500M SAT):</strong> Awareness-building campaigns, digital activism, and decentralized education.</li>
+            <li><strong>50% (500M SAT):</strong> Total Burn Supply</li>
             <li><strong>30% (300M SAT):</strong> Humanitarian donations, partnerships with NGOs, and emergency relief funding.</li>
             <li><strong>10% (100M SAT):</strong> Development of blockchain-based awareness platforms and advocacy tools.</li>
             <li><strong>5% (50M SAT):</strong> Media production and outreach initiatives, including documentaries, reports, and social campaigns.</li>

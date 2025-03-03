@@ -5,7 +5,7 @@ import { FaLightbulb, FaHandHoldingHeart, FaUserFriends, FaTools, FaFilm, FaShie
 export default function Tokenomics() {
   // Token allocation data aligned with whitepaper
   const tokenAllocation = [
-    { name: "Supply", percentage: 50, color: "#4da6ff", icon: <FaLightbulb /> },
+    { name: "Burned Supply", percentage: 50, color: "#4da6ff", icon: <FaLightbulb /> },
     { name: "Humanitarian Support", percentage: 30, color: "#66bb6a", icon: <FaHandHoldingHeart /> },
     { name: "Platform Development", percentage: 10, color: "#8c52ff", icon: <FaTools /> },
     { name: "Media & Outreach", percentage: 5, color: "#ff7043", icon: <FaFilm /> },
