@@ -1,66 +1,451 @@
-/* Tokenomics.css */
-
-/* General styling for the section */
+/* Tokenomics Styling */
 .tokenomics-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #1E1A39;
-    color: white;
-    padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #1E1A39 0%, #2a2550 100%);
+  color: white;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle background effect */
+.tokenomics-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(253, 187, 45, 0.05), transparent 60%);
+  pointer-events: none;
+}
+
+/* Header Section */
+.tokenomics-header {
+  text-align: center;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.tokenomics-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #fdbb2d, #ffdc86);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tokenomics-subtitle {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Disclaimer Banner */
+.disclaimer-banner {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 100, 100, 0.1);
+  border: 1px solid rgba(255, 100, 100, 0.3);
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.disclaimer-icon {
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 100, 100, 0.8);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.disclaimer-banner p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.disclaimer-banner strong {
+  color: #ff6464;
+}
+
+.section-subtitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #fdbb2d;
+}
+
+/* Token Details Grid */
+.token-details-section {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 60px;
+}
+
+.token-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.token-detail-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.token-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(253, 187, 45, 0.3);
+}
+
+.detail-title {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+.detail-value {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Highlight non-financial nature */
+.token-detail-card:nth-child(2) .detail-value,
+.token-detail-card:nth-child(6) .detail-value {
+  color: #fdbb2d;
+}
+
+/* Main Grid Layout */
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 60px;
+}
+
+/* Allocation Section */
+.allocation-section {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.allocation-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin-bottom: 30px;
+}
+
+.pie-chart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pie-segment {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+}
+
+.allocation-legend {
+  width: 100%;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.legend-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.legend-name {
+  font-weight: 500;
+}
+
+.legend-percentage {
+  font-weight: 600;
+}
+
+/* Initiatives Section */
+.initiatives-section {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.initiative-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.initiative-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.initiative-icon {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fdbb2d;
+}
+
+.initiative-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.initiative-description {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+/* NGO Partners Section */
+.ngo-partners-section {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 60px;
+}
+
+.ngo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.ngo-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s;
+}
+
+.ngo-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(253, 187, 45, 0.3);
+}
+
+.ngo-region {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fdbb2d;
+}
+
+.ngo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ngo-item {
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.ngo-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ngo-name {
+  font-weight: 500;
+}
+
+/* CTA Section */
+.tokenomics-cta {
+  background: linear-gradient(45deg, rgba(253, 187, 45, 0.1), rgba(253, 187, 45, 0.05));
+  border: 1px solid rgba(253, 187, 45, 0.2);
+  border-radius: 15px;
+  padding: 40px;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cta-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.cta-text {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #e0e0e0;
+}
+
+.whitepaper-btn {
+  background: transparent;
+  color: #fdbb2d;
+  border: 2px solid #fdbb2d;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.whitepaper-btn:hover {
+  background: #fdbb2d;
+  color: #1E1A39;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(253, 187, 45, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.token-details-section,
+.tokenomics-grid,
+.ngo-partners-section,
+.tokenomics-cta,
+.disclaimer-banner {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.token-details-section { animation-delay: 0.1s; }
+.disclaimer-banner { animation-delay: 0.2s; }
+.tokenomics-grid { animation-delay: 0.3s; }
+.ngo-partners-section { animation-delay: 0.4s; }
+.tokenomics-cta { animation-delay: 0.5s; }
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .tokenomics-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
   
-  /* Title styling */
+  .initiatives-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
   .tokenomics-title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #fdbb2d; /* Gold accent color */
+    font-size: 2rem;
   }
   
-  /* Container for tokenomics items */
-  .tokenomics-details {
-    display: flex;
+  .section-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .token-details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .tokenomics-cta {
+    padding: 30px 20px;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .disclaimer-banner {
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    text-align: center;
+  }
+
+  .disclaimer-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .token-details-grid {
+    grid-template-columns: 1fr;
   }
   
-  /* Individual tokenomics items */
-  .tokenomics-item {
-    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
-    padding: 15px 25px;
-    border-radius: 10px;
+  .ngo-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .detail-value {
+    font-size: 1.1rem;
+  }
+  
+  .whitepaper-btn {
     width: 100%;
-    max-width: 350px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: transform 0.2s ease, background 0.3s ease;
-    font-size: 18px;
-    font-weight: 500;
   }
-  
-  /* Hover effect for interactivity */
-  .tokenomics-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
-  }
-  
-  /* Styling for tokenomics item headings */
-  .tokenomics-item h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-  }
-  
-  /* Styling for tokenomics item values */
-  .tokenomics-item span {
-    font-weight: 700;
-    color: #fdbb2d; /* Gold color */
-    font-size: 18px;
-  }
-  
+}
