@@ -2,7 +2,7 @@
 .whitepaper-container {
   background: linear-gradient(135deg, #1E1A39 0%, #2a2550 100%);
   color: #f0f0f0;
-  padding: 60px 20px;
+  padding: 40px 15px; /* Reduced padding for all screens */
   min-height: 100vh;
   font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
   line-height: 1.6;
@@ -26,23 +26,27 @@
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 15px;
-  padding: 50px;
+  padding: 40px 30px; /* Adjusted padding */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   z-index: 1;
+  width: 100%; /* Ensure it takes full width of container */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Main Title */
 .whitepaper-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   background: linear-gradient(90deg, #fdbb2d, #ffdc86);
   -webkit-background-clip: text;
+  background-clip: text; /* Add standard property */
   -webkit-text-fill-color: transparent;
   position: relative;
   padding-bottom: 20px;
+  word-wrap: break-word; /* Allow long words to break */
 }
 
 .whitepaper-content h1::after {
@@ -57,8 +61,8 @@
 
 /* Section Styling */
 section {
-  margin-bottom: 40px;
-  padding-bottom: 30px;
+  margin-bottom: 30px; /* Reduced margin */
+  padding-bottom: 25px; /* Reduced padding */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   animation: fadeIn 0.8s ease-out forwards;
 }
@@ -69,11 +73,12 @@ section:last-child {
 
 /* Headings */
 .whitepaper-content h2 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: #fdbb2d;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   position: relative;
   display: inline-block;
+  word-wrap: break-word; /* Allow long words to break */
 }
 
 .whitepaper-content h2::before {
@@ -87,20 +92,22 @@ section:last-child {
 }
 
 .whitepaper-content h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #e0e0e0;
-  margin: 25px 0 15px;
+  margin: 20px 0 15px;
+  word-wrap: break-word; /* Allow long words to break */
 }
 
 /* Paragraphs and Lists */
 .whitepaper-content p {
   margin-bottom: 20px;
-  text-align: justify;
+  text-align: left; /* Changed from justify for better mobile readability */
 }
 
 .whitepaper-content ul {
-  padding-left: 20px;
+  padding-left: 15px; /* Reduced padding */
   margin-bottom: 20px;
+  list-style-position: outside; /* Ensure bullets remain visible */
 }
 
 .whitepaper-content li {
@@ -125,6 +132,7 @@ section:last-child {
   text-decoration: none;
   transition: color 0.3s ease;
   border-bottom: 1px dashed rgba(77, 166, 255, 0.5);
+  word-break: break-word; /* Allow links to break */
 }
 
 .whitepaper-content a:hover {
@@ -133,6 +141,10 @@ section:last-child {
 }
 
 /* Token Allocation Section */
+.whitepaper-content section:nth-of-type(5) ul {
+  padding-left: 0; /* Remove padding since we're using custom styling */
+}
+
 .whitepaper-content section:nth-of-type(5) ul li {
   background: rgba(255, 255, 255, 0.05);
   padding: 12px 15px;
@@ -149,6 +161,10 @@ section:last-child {
 }
 
 /* Roadmap Section */
+.whitepaper-content section:nth-of-type(6) ul {
+  padding-left: 0; /* Remove padding since we're using custom styling */
+}
+
 .whitepaper-content section:nth-of-type(6) ul li {
   background: rgba(255, 255, 255, 0.05);
   padding: 15px;
@@ -170,6 +186,10 @@ section:last-child {
 }
 
 /* Partner NGOs in the DRC and Palestine Section */
+.whitepaper-content section:nth-of-type(4) ul {
+  padding-left: 0; /* Remove padding since we're using custom styling */
+}
+
 .whitepaper-content section:nth-of-type(4) ul li {
   background: rgba(255, 255, 255, 0.03);
   padding: 20px;
@@ -215,23 +235,36 @@ section:last-child {
   }
 }
 
-section:nth-child(1) { animation-delay: 0.1s; }
-section:nth-child(2) { animation-delay: 0.2s; }
-section:nth-child(3) { animation-delay: 0.3s; }
-section:nth-child(4) { animation-delay: 0.4s; }
-section:nth-child(5) { animation-delay: 0.5s; }
-section:nth-child(6) { animation-delay: 0.6s; }
-section:nth-child(7) { animation-delay: 0.7s; }
+/* Reduce animation delay on mobile for faster perceived loading */
+@media (max-width: 768px) {
+  section:nth-child(1) { animation-delay: 0.05s; }
+  section:nth-child(2) { animation-delay: 0.1s; }
+  section:nth-child(3) { animation-delay: 0.15s; }
+  section:nth-child(4) { animation-delay: 0.2s; }
+  section:nth-child(5) { animation-delay: 0.25s; }
+  section:nth-child(6) { animation-delay: 0.3s; }
+  section:nth-child(7) { animation-delay: 0.35s; }
+}
+
+@media (min-width: 769px) {
+  section:nth-child(1) { animation-delay: 0.1s; }
+  section:nth-child(2) { animation-delay: 0.2s; }
+  section:nth-child(3) { animation-delay: 0.3s; }
+  section:nth-child(4) { animation-delay: 0.4s; }
+  section:nth-child(5) { animation-delay: 0.5s; }
+  section:nth-child(6) { animation-delay: 0.6s; }
+  section:nth-child(7) { animation-delay: 0.7s; }
+}
 
 /* Back to top button */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px; /* Moved up slightly */
+  right: 20px; /* Moved in slightly */
   background: #fdbb2d;
   color: #1E1A39;
-  width: 50px;
-  height: 50px;
+  width: 45px; /* Slightly smaller */
+  height: 45px; /* Slightly smaller */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -242,6 +275,8 @@ section:nth-child(7) { animation-delay: 0.7s; }
   transition: opacity 0.3s, transform 0.3s;
   transform: translateY(20px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Add tap highlight color for mobile */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .back-to-top.visible {
@@ -253,14 +288,15 @@ section:nth-child(7) { animation-delay: 0.7s; }
   transform: translateY(-5px);
 }
 
-/* Media Queries */
+/* Better Media Queries */
 @media (max-width: 992px) {
   .whitepaper-content {
-    padding: 30px;
+    padding: 30px 25px;
   }
   
   .whitepaper-content h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-bottom: 25px;
   }
   
   .whitepaper-content h2 {
@@ -270,54 +306,122 @@ section:nth-child(7) { animation-delay: 0.7s; }
 
 @media (max-width: 768px) {
   .whitepaper-container {
-    padding: 30px 15px;
+    padding: 25px 12px;
   }
   
   .whitepaper-content {
-    padding: 25px 20px;
+    padding: 25px 18px;
+    border-radius: 12px;
   }
   
   .whitepaper-content h1 {
     font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
   }
   
   .whitepaper-content h2 {
     font-size: 1.5rem;
+    margin-bottom: 12px;
   }
   
   .whitepaper-content h3 {
     font-size: 1.3rem;
+    margin: 18px 0 12px;
+  }
+  
+  section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
   }
   
   .whitepaper-content section:nth-of-type(4) ul li,
   .whitepaper-content section:nth-of-type(5) ul li,
   .whitepaper-content section:nth-of-type(6) ul li {
-    padding: 15px 10px;
+    padding: 15px 12px;
+  }
+  
+  .whitepaper-content section:nth-of-type(4) ul li strong {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
+  .whitepaper-container {
+    padding: 100px 10px;
+  }
+
+  .whitepaper-content {
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
+  
   .whitepaper-content h1 {
     font-size: 1.6rem;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
   }
   
   .whitepaper-content h2 {
     font-size: 1.4rem;
+    margin-bottom: 10px;
   }
   
   .whitepaper-content h3 {
     font-size: 1.2rem;
+    margin: 15px 0 10px;
   }
   
   .whitepaper-content p, 
   .whitepaper-content li {
     font-size: 0.95rem;
+    line-height: 1.5;
   }
   
   .back-to-top {
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     width: 40px;
     height: 40px;
+  }
+  
+  .whitepaper-content section:nth-of-type(4) ul li,
+  .whitepaper-content section:nth-of-type(5) ul li,
+  .whitepaper-content section:nth-of-type(6) ul li {
+    padding: 12px 10px;
+  }
+  
+  /* Further reduce custom list spacing */
+  .whitepaper-content section:nth-of-type(4) ul li {
+    padding: 15px 12px;
+  }
+  
+  .whitepaper-content section:nth-of-type(4) ul li strong {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+}
+
+/* Fix for very small screens */
+@media (max-width: 360px) {
+  .whitepaper-content {
+    padding: 15px 12px;
+  }
+  
+  .whitepaper-content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .whitepaper-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .whitepaper-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .whitepaper-content p, 
+  .whitepaper-content li {
+    font-size: 0.9rem;
   }
 }
